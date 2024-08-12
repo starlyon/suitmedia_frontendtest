@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ff6600;
+    color: #fff;
+    padding: 1rem;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+header.hidden {
+    transform: translateY(-100%);
+}
+
+header.transparent {
+    background-color: #ff7230;
+}
+
+header .image img{
+    width: 65px;
+    height: 30px;
+    float: left;
+    margin-left: 5%;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    margin-left: 65%;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+}
+
+#banner {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://st.depositphotos.com/64313704/60162/i/450/depositphotos_601625302-stock-photo-teacher-day-creative-banner-back.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(-4px) scale(2);
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+#banner::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom right, transparent 50%, #fff 51%);
+}
+
+#list-post {
+    padding: 2rem;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+#post-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.post-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.post-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-card h3 {
+    padding: 0.5rem;
+    font-size: 1rem;
+    max-height: 4.8em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+#pagination button {
+    margin: 0 0.25rem;
+    padding: 0.5rem 1rem;
+    background-color: #505050;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#item-status {
+    text-align: center;
+    margin-top: 1rem;
+}

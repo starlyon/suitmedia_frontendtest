@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suitmedia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <div class="image">
+            <img src="https://suitmedia-codingtest-vidi.vercel.app/logo.png">
+            </div>
+            <ul>
+                <li><a href="index.html" >Work</a></li>
+                <li><a href="about.html" >About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="ideas.html">Ideas</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html"class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="banner">
+            <div class="banner-image"></div>
+            <div class="banner-text">
+                <h1>Ideas</h1>
+                <p>Where all our great things begin</p>
+            </div>
+        </section>
+
+        <section id="list-post">
+            <div class="controls">
+                <div class="sort">
+                    <div id="item-status"></div>
+                </div>
+                <div class="show-per-page">
+                    <label for="sort-select">Short by:</label>
+                    <select id="sort-select">
+                        <option value="newest">Newest</option>
+                        <option value="oldest">Oldest</option>
+                    </select>
+                    <label for="show-select">Show per</label>
+                    <select id="show-select">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                    </select>
+                </div>
+            </div>
+            <div id="post-container"></div>
+            <div id="pagination"></div>
+            
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
